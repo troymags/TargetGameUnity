@@ -273,8 +273,8 @@ MonoBehaviour:
     y: 0
     width: 400
     height: 802
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 76}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -302,8 +302,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1112
-    y: 102
+    x: 1113
+    y: 24
     width: 399
     height: 776
   m_SerializedDataModeController:
@@ -352,7 +352,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 102
+    y: 24
     width: 229.5
     height: 523.5
   m_SerializedDataModeController:
@@ -1184,8 +1184,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Game\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 230.5
-    y: 102
+    x: 231.5
+    y: 24
     width: 879.5
     height: 523.5
   m_SerializedDataModeController:
@@ -1245,7 +1245,7 @@ MonoBehaviour:
       y: 21
       width: 879.5
       height: 502.5
-    m_Scale: {x: 0.91614586, y: 0.9161458}
+    m_Scale: {x: 0.91614586, y: 0.91614586}
     m_Translation: {x: 439.75, y: 251.25}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -1259,7 +1259,7 @@ MonoBehaviour:
       height: 548.49347
     m_MinimalGUI: 1
   m_defaultScale: 0.91614586
-  m_LastWindowPixelSize: {x: 1759, y: 1047}
+  m_LastWindowPixelSize: {x: 879.5, y: 523.5}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 00000000000000000000
@@ -1288,7 +1288,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 651.5
+    y: 573.5
     width: 1111
     height: 226.5
   m_SerializedDataModeController:
@@ -1332,7 +1332,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 7cb90000
     m_LastClickedID: 47484
-    m_ExpandedIDs: 000000007cb9000000ca9a3b
+    m_ExpandedIDs: 000000000cb90000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1361,7 +1361,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 000000000cb90000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
