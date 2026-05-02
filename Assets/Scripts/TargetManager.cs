@@ -8,8 +8,8 @@ public class TargetManager : MonoBehaviour
     [SerializeField]
     private GameObject target;
 
-    [SerializeField]
-    private Texture cursorTexture;
+   // [SerializeField]
+    //private Texture cursorTexture;
 
     private Vector2 cursorHotspot;
     private Vector2 mousePos;
@@ -36,8 +36,9 @@ public class TargetManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        cursorHotspot = new Vector2(cursorTexture.width / 2, cursorTexture.height / 2);
-        Cursor.SetCursor((Texture2D)cursorTexture, cursorHotspot, CursorMode.Auto);
+        /* cursorHotspot = new Vector2(cursorTexture.width / 2, cursorTexture.height / 2);
+        Cursor.SetCursor((cursorTexture, cursorHotspot, CursorMode.Auto));
+        Cursor.scale = new Vector3(0.1f, 0.1f, 0.1f); */
 
         getReadyText.gameObject.SetActive(false);
 
