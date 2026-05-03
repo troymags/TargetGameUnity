@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-guid: e6c1ffc6625a447ce9932a2e7dc2db3b
+guid: 5ab6db2920c6c4d6aabdc221d17ea5c7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5841041832737214816
-    second: targetCursorSprite128_0
-  - first:
-      213: 7463309712626852769
-    second: targetCursorSprite128_1
-  - first:
-      213: -6758730186369276645
-    second: targetCursorSprite128_2
-  - first:
-      213: 261116207875188476
-    second: targetCursorSprite128_3
-  - first:
-      213: 541376126364131863
-    second: targetCursorSprite128_4
+      213: 4804861607676828681
+    second: targetCursorSprite32 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -112,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: targetCursorSprite128_0
+      name: targetCursorSprite32 1_0
       rect:
         serializedVersion: 2
-        x: 57
-        y: 75
-        width: 14
-        height: 50
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,96 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0ae6089766370fea0800000000000000
-      internalID: -5841041832737214816
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: targetCursorSprite128_1
-      rect:
-        serializedVersion: 2
-        x: 3
-        y: 57
-        width: 50
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1a3a8dd24a0039760800000000000000
-      internalID: 7463309712626852769
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: targetCursorSprite128_2
-      rect:
-        serializedVersion: 2
-        x: 57
-        y: 57
-        width: 14
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b15efbc64ba2432a0800000000000000
-      internalID: -6758730186369276645
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: targetCursorSprite128_3
-      rect:
-        serializedVersion: 2
-        x: 75
-        y: 57
-        width: 50
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cf66f7fbecbaf9300800000000000000
-      internalID: 261116207875188476
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: targetCursorSprite128_4
-      rect:
-        serializedVersion: 2
-        x: 57
-        y: 3
-        width: 14
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 712afc5f7ba538700800000000000000
-      internalID: 541376126364131863
+      spriteID: 90c5d78cc2c4ea240800000000000000
+      internalID: 4804861607676828681
       vertices: []
       indices: 
       edges: []
@@ -235,11 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      targetCursorSprite128_0: -5841041832737214816
-      targetCursorSprite128_1: 7463309712626852769
-      targetCursorSprite128_2: -6758730186369276645
-      targetCursorSprite128_3: 261116207875188476
-      targetCursorSprite128_4: 541376126364131863
+      targetCursorSprite32 1_0: 4804861607676828681
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

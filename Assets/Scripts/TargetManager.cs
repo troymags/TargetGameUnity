@@ -8,8 +8,8 @@ public class TargetManager : MonoBehaviour
     [SerializeField]
     private GameObject target;
 
-   // [SerializeField]
-    //private Texture cursorTexture;
+    [SerializeField]
+    private Texture2D cursorTexture;
 
     private Vector2 cursorHotspot;
     private Vector2 mousePos;
@@ -36,9 +36,8 @@ public class TargetManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        /* cursorHotspot = new Vector2(cursorTexture.width / 2, cursorTexture.height / 2);
-        Cursor.SetCursor((cursorTexture, cursorHotspot, CursorMode.Auto));
-        Cursor.scale = new Vector3(0.1f, 0.1f, 0.1f); */
+        cursorHotspot = new Vector2(cursorTexture.width / 2, cursorTexture.height / 2);
+        Cursor.SetCursor(cursorTexture, cursorHotspot, CursorMode.Auto);
 
         getReadyText.gameObject.SetActive(false);
 
@@ -63,14 +62,14 @@ public class TargetManager : MonoBehaviour
     {
         for (int i = 3; i >= 1; i--)
         {
-            getReadyText.text = "Get Ready! " + i.ToString();
+            getReadyText.text = "Get Ready!\n " + i.ToString();
             yield return new WaitForSeconds(1f);
         }
 
         getReadyText.text = "Go!";
         yield return new WaitForSeconds(1f);
 
-         StartCoroutine(SpawnTargets());
+         StartCoroutine("SpawnTargets");
     }
 
     private IEnumerator SpawnTargets()
@@ -79,7 +78,7 @@ public class TargetManager : MonoBehaviour
         score = 0;
         shotsFired = 0;
         targetsHit = 0;
-        accuracy = 0f;
+        accuracy = 0;
 
         for (int i = targetAmount; i >= 0; i--)
         {
@@ -91,17 +90,18 @@ public class TargetManager : MonoBehaviour
 
         resultsPanel.SetActive(true);
         scoreText.text = "Score: " + score;
-        targetsHitText.text = "Targets Hit: " + targetsHit + " / " + targetAmount;
+        targetsHitText.text = "Targets Hit: " + targetsHit + "/" + targetAmount;
         shotsFiredText.text = "Shots Fired: " + shotsFired;
 
         accuracy = targetsHit / shotsFired * 100f;
         accuracyText.text = "Accuracy: " + accuracy.ToString("N2") + " %";
     }
 
-    public void StartGame()
+    public void StartGetReadyCoroutine()
     {
         resultsPanel.SetActive(false);
         getReadyText.gameObject.SetActive(true);
-        StartCoroutine(GetReady());
+        StartCoroutine("GetReady");
+
     }   
 }
