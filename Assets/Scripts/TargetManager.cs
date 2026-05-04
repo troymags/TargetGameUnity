@@ -189,6 +189,7 @@ public class TargetManager : MonoBehaviour
                 writer.WriteLine($"{i + 1},{d.size},{d.reactionTimeMs:F2},{d.position.x:F3},{d.position.y:F3},{d.distanceFromPrevious:F3},{d.hit}");
             }
         }
+        
         Debug.Log("CSV saved to: " + path);
     }
 

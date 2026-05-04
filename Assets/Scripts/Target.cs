@@ -1,3 +1,8 @@
+// Base implementation adapted from [Making A Simple Aim Trainer Game With Unity Software In 10 Minutes | Easy Tutorial] by [Alexander Zotov]
+// URL: [https://www.youtube.com/watch?v=Rs75p2ZA_SU]
+// Modifications: variable target sizing, reaction time logging,
+// CSV export, distance tracking — added by Leeiam Magsipoc
+
 using UnityEngine;
 
 public class Target : MonoBehaviour
