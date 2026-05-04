@@ -32,9 +32,17 @@ public class Target : MonoBehaviour
 
         TargetManager.score += 10;
         TargetManager.targetsHit += 1;
+        TargetManager.LogHit(targetSize, reactionTime, transform.position);
 
         Destroy(gameObject);
     }
 
-    
+    void OnDestroy()
+    {
+        if (!wasHit)
+        {
+            TargetManager.LogMiss(targetSize, transform.position);
+        }
+    }
+
 }
