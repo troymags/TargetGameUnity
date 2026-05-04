@@ -2,6 +2,10 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
+    private float spawnTime;
+    private float targetSize;
+    private bool wasHit = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

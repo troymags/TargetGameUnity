@@ -920,7 +920,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1620697551
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1178,7 +1178,7 @@ MonoBehaviour:
   target: {fileID: 160317922360455035, guid: 443869b99bc434772ae456711ed85883, type: 3}
   cursorTexture: {fileID: 2800000, guid: 5ab6db2920c6c4d6aabdc221d17ea5c7, type: 3}
   getReadyText: {fileID: 2032551275}
-  resultsPanel: {fileID: 1939809863}
+  resultsPanel: {fileID: 1620697550}
   scoreText: {fileID: 857064822}
   targetsHitText: {fileID: 904901311}
   shotsFiredText: {fileID: 845533845}
