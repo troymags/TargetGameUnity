@@ -143,6 +143,33 @@ public class TargetManager : MonoBehaviour
 
     }
 
+        public static void LogHit(float size, float reactionTime, Vector2 position)
+    {
+        float distance = Vector2.Distance(lastHitPos, position);
+        targetDataLog.Add(new TargetData
+        {
+            size = size,
+            reactionTimeMs = reactionTime * 1000f,
+            position = position,
+            distanceFromPrevious = distance,
+            hit = true
+        });
+        lastHitPos = position;
+    }
+
+    public static void LogMiss(float size, Vector2 position)
+    {
+        float distance = Vector2.Distance(lastHitPos, position);
+        targetDataLog.Add(new TargetData
+        {
+            size = size,
+            reactionTimeMs = -1f,
+            position = position,
+            distanceFromPrevious = distance,
+            hit = false
+        });
+    }
+
     private void SaveDataToCSV()
     {
         string fileName = $"AimData_{System.DateTime.Now:yyyyMMdd_HHmmss}.csv";
