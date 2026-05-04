@@ -19,7 +19,7 @@ public class TargetManager : MonoBehaviour
     private GameObject resultsPanel;
 
     [SerializeField]
-    private Text scoreText, targetsHitText, shotsFiredText, accuracyText;
+    private Text scoreText, targetsHitText, shotsFiredText, accuracyText, reactionTimeText;
 
     [Header("Target Sizes")]
     [SerializeField] private float smallSize = 0.5f;
@@ -109,7 +109,7 @@ public class TargetManager : MonoBehaviour
             GameObject newTarget = Instantiate(target, targetRandomPos, Quaternion.identity);
             newTarget.GetComponent<Target>().SetSize(chosenSize);
 
-            yield return new WaitForSeconds(1f);x
+            yield return new WaitForSeconds(1f);
         }
 
        ShowResults();
@@ -124,6 +124,40 @@ public class TargetManager : MonoBehaviour
 
         accuracy = (shotsFired > 0) ? (targetsHit / shotsFired * 100f) : 0f;
         accuracyText.text = "Accuracy: " + accuracy.ToString("N2") + " %";
+
+        float avgRT = CalculateAverageReactionTime();
+        reactionTimeText.text = "Avg Reaction Time: " + avgRT.ToString("N0") + " ms";
+
+        SaveDataToCSV();
+    }
+
+    private float CalculateAverageReactionTime()
+    {
+        float total = 0f;
+        int count = 0;
+        foreach (var d in targetDataLog)
+        {
+            if (d.hit) { total += d.reactionTimeMs; count++; }
+        }
+        return count > 0 ? total / count : 0f;
+
+    }
+
+    private void SaveDataToCSV()
+    {
+        string fileName = $"AimData_{System.DateTime.Now:yyyyMMdd_HHmmss}.csv";
+        string path = Path.Combine(Application.persistentDataPath, fileName);
+
+        using (StreamWriter writer = new StreamWriter(path))
+        {
+            writer.WriteLine("TrialNumber,TargetSize,ReactionTime_ms,PosX,PosY,DistanceFromPrevious,Hit");
+            for (int i = 0; i < targetDataLog.Count; i++)
+            {
+                var d = targetDataLog[i];
+                writer.WriteLine($"{i + 1},{d.size},{d.reactionTimeMs:F2},{d.position.x:F3},{d.position.y:F3},{d.distanceFromPrevious:F3},{d.hit}");
+            }
+        }
+        Debug.Log("CSV saved to: " + path);
     }
 
     public void StartGetReadyCoroutine()
