@@ -674,7 +674,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 98}
+  m_AnchoredPosition: {x: 0, y: 112}
   m_SizeDelta: {x: 650, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &904901311
@@ -1263,6 +1263,10 @@ MonoBehaviour:
   targetsHitText: {fileID: 904901311}
   shotsFiredText: {fileID: 845533845}
   accuracyText: {fileID: 1221604280}
+  reactionTimeText: {fileID: 1900331851}
+  smallSize: 0.2
+  mediumSize: 0.25
+  largeSize: 0.35
 --- !u!4 &2064636675
 Transform:
   m_ObjectHideFlags: 0
